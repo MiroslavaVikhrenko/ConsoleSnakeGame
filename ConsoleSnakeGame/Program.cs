@@ -6,6 +6,7 @@ namespace ConsoleSnakeGame
     {
         static void Main(string[] args)
         {
+            Console.CursorVisible = false;
             Location head = new Location(40, 12);
 
             List<Location> snake = new List<Location>();
@@ -25,14 +26,14 @@ namespace ConsoleSnakeGame
                 foreach (Location location in snake)
                 {
                     Console.SetCursorPosition(location.X, location.Y);
-                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.ForegroundColor = ConsoleColor.Green;
                     Console.Write("S");
                     Console.ResetColor();
                 }
                 // show food
 
                 Console.SetCursorPosition(food.X, food.Y);
-                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.Write('F');
                 Console.ResetColor();
 
